@@ -16,6 +16,25 @@ class Navbar extends Component {
 
   }
 
+  async helloWorld(){
+    try{
+      let data = JSON.stringify({message: 'hello my friends!'});
+      let response = await fetch("http://localhost:443/helloworld", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: data,
+        mode: "no-cors"
+      });
+      if(response.ok){
+        console.log(response)
+      }
+    }
+    catch(e){
+      console.log(e);
+    }
+
+  }
+
 
   render() {
     return (
@@ -40,7 +59,7 @@ class Navbar extends Component {
             </div>
 
             <div className="btn-group" role="group" aria-label="Button group with nested dropdown">
-              <button type="button" className="btn btn-outline-info">Sign-In</button>
+              <button onClick={() => this.helloWorld()} type="button" className="btn btn-outline-info">Sign-In</button>
               <button type="button" className="btn btn-outline-primary">Sign-Up</button>
 
               <div className="btn-group" role="group">
