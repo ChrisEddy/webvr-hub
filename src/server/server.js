@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 const PORT = process.env.PORT || 9000;
 
-app.get('*', express.static(path.join(__dirname, '..', 'build')));
+app.get('*', express.static(path.join(__dirname, '../..', 'build')));
 
 
 app.post('/helloworld', bodyParser.json(), async (req, res) => {
