@@ -19,7 +19,7 @@ class Navbar extends Component {
   async helloWorld(){
     try{
       let data = JSON.stringify({message: 'hello my friends!'});
-      let response = await fetch("http://localhost:443/helloworld", {
+      let response = await fetch("/helloworld", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: data,
