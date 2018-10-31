@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import '../css/navbar.css';
 
@@ -40,7 +40,7 @@ class Navbar extends Component {
     return (
       <div className="Navbar">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand" href="#">WebVR Hub</a>
+          <a className="navbar-brand" href="/">WebVR Hub</a>
 
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                   aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,10 +49,10 @@ class Navbar extends Component {
 
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <a className="nav-item nav-link" href="">Home<span className="sr-only">(current)</span></a>
-              <a className="nav-item nav-link" href="" >Forums</a>
-              <a className="nav-item nav-link" href="">Reviews</a>
-              <a className="nav-item nav-link" href="">Assets</a>
+              <a className="nav-item nav-link" href="/">Home<span className="sr-only">(current)</span></a>
+              <a className="nav-item nav-link" href="/" >Forums</a>
+              <a className="nav-item nav-link" href="/">Reviews</a>
+              <a className="nav-item nav-link" href="/">Assets</a>
             </div>
 
             <div className='spacer'>
@@ -68,9 +68,9 @@ class Navbar extends Component {
                   Profile
                 </button>
                 <div className="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                  <a className="dropdown-item" href="#">Social</a>
-                  <a className="dropdown-item" href="#">Apps</a>
-                  <a className="dropdown-item" href="#">Account</a>
+                  <a className="dropdown-item" href="/">Social</a>
+                  <a className="dropdown-item" href="/">Apps</a>
+                  <a className="dropdown-item" href="/">Account</a>
                 </div>
 
               </div>

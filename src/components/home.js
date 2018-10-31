@@ -34,19 +34,19 @@ class Home extends Component {
       <div className="Home">
 
         <iframe id="Iframe" width="100%" height="100%" allowFullScreen="yes"
-                scrolling="no"
+                scrolling="no" title='Apps'
                 src={this.state.iframeURL}/>
 
         <div className='row'>
 
           <div className='col-3'>
-            <img src="https://backgroundcheckall.com/wp-content/uploads/2017/12/svg-background-images-2.jpg" className="img-fluid" alt="Responsive image"/>
+            <img src="https://backgroundcheckall.com/wp-content/uploads/2017/12/svg-background-images-2.jpg" className="img-fluid" alt="Randompic"/>
             <h3 className='pl-2 pt-2' style={{"color": "white"}}>Categories</h3>
             <nav className="nav flex-column pl-1" style={{"color": "white"}}>
-              <a className="nav-link" href=''>First Person Shooter</a>
-              <a className="nav-link" href=''>Adventure</a>
-              <a className="nav-link" href=''>Educational</a>
-              <a className="nav-link" href=''>Strategy</a>
+              <a className="nav-link" href='/'>First Person Shooter</a>
+              <a className="nav-link" href='/'>Adventure</a>
+              <a className="nav-link" href='/'>Educational</a>
+              <a className="nav-link" href='/'>Strategy</a>
             </nav>
           </div>
 
