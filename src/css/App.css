@@ -10,4 +10,6 @@ body{
   height: 100vh;
   width: 100vw;
 }
-
+.Navbar .spacer{
+  width:70%;
+}

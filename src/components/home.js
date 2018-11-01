@@ -1,19 +1,16 @@
-import gunters from "../gunters.PNG";
-import painter from "../painter.PNG";
-import solar from "../solar.PNG";
-import blast from "../ablast.PNG";
-
-import React, { Component } from 'react';
-
+import gunters from "../images/gunters.PNG";
+import painter from "../images/painter.PNG";
+import solar from "../images/solar.PNG";
+import blast from "../images/ablast.PNG";
 import '../css/home.css';
+import React, { Component } from 'react';
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      iframeURL: ''
+      iframeURL: '',
     };
-
   }
 
   componentDidMount(){
@@ -21,17 +18,15 @@ class Home extends Component {
     document.getElementById('Iframe').hidden = true;
   }
 
-
   enterApp(url){
     this.setState({ iframeURL: url });
     document.getElementById('library').hidden = true;
     document.getElementById('Iframe').hidden = false;
   }
 
-
   render() {
     return (
-      <div className="Home">
+      <div className="Home" id='Home'>
 
         <iframe id="Iframe" width="100%" height="100%" allowFullScreen="yes"
                 scrolling="no" title='Apps'
@@ -127,14 +122,11 @@ class Home extends Component {
               </div>
 
             </div>
-
           </div>
 
           <div className='col-3'>
 
           </div>
-
-
         </div>
 
       </div>

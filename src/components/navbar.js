@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import '../css/navbar.css';
+import Forums from "./forums";
+import Home from "./home";
+import Reviews from "./reviews";
+import Assets from "./assets";
 
 class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      howdy: 'partner'
     };
-
   }
 
   componentDidMount(){
@@ -35,9 +37,9 @@ class Navbar extends Component {
 
   }
 
-
   render() {
     return (
+      <Router>
       <div className="Navbar">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <a className="navbar-brand" href="/">WebVR Hub</a>
@@ -49,10 +51,10 @@ class Navbar extends Component {
 
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <a className="nav-item nav-link" href="/">Home<span className="sr-only">(current)</span></a>
-              <a className="nav-item nav-link" href="/" >Forums</a>
-              <a className="nav-item nav-link" href="/">Reviews</a>
-              <a className="nav-item nav-link" href="/">Assets</a>
+              <Link className="nav-item nav-link" to="/home">Home</Link>
+              <Link className="nav-item nav-link" to="/forums">Forums</Link>
+              <Link className="nav-item nav-link" to="/reviews">Reviews</Link>
+              <Link className="nav-item nav-link" to="/assets">Assets</Link>
             </div>
 
             <div className='spacer'>
@@ -78,7 +80,14 @@ class Navbar extends Component {
 
           </div>
         </nav>
+
+        <Route path="/home/" component={Home} />
+        <Route path="/forums/" component={Forums} />
+        <Route path="/reviews/" component={Reviews} />
+        <Route path="/assets/" component={Assets} />
+
       </div>
+      </Router>
     );
   }
 }
